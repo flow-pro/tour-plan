@@ -598,7 +598,7 @@ template {
   border-radius: 8px;
 }
 
-.swiper-container::after {
+.swiper-slide::after {
   content: '';
   position: absolute;
   width: 100%;
