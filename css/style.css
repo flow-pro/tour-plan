@@ -630,6 +630,7 @@ template {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
+  outline: 0;
 }
 
 .slider-button--next {
