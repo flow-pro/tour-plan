@@ -805,6 +805,13 @@ template {
   overflow: hidden;
 }
 
+.newsletter {
+  padding: 98px 0 87px 0;
+  background-image: url(../image/newsletter-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
