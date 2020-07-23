@@ -673,6 +673,8 @@ template {
   padding: 28px;
   background-color: #0A223D;
   color: #ffffff;
+  font-family: Nunito;
+  font-style: normal;
 }
 
 .booking__info {
