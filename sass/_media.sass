@@ -1,6 +1,19 @@
 @media (max-width: 1200px)
   .container
     max-width: 960px
+  .slider
+    width: 590px 
+  .swiper
+    &-slide
+      // мое бордер радиус для псевдокласса - применяется к верхней и в целом с бордером для image все равботает
+      &::after
+        border-radius: 8px
+      &__image
+        width: 100%
+        height: 100%
+        object-fit: cover
+        // мое бордер 8 -но применяется только к нижней части во всех браузерах
+        border-radius: 8px
 @media (max-width: 992px)
   .container
     max-width: 700px
@@ -18,6 +31,19 @@
       &__link
         font-size: 12px
         line-height: 15px
+  .hotel
+    &-grid
+      flex-direction: column
+    &__slider
+      margin-bottom: 30px
+    &-right
+      flex-direction: row
+  .booking
+    width: 340px
+  .slider
+    width: 100%
+  .map
+    width: 340px
   .search  
     &__input  
       width: 340px
@@ -63,10 +89,26 @@
       &__offer
         order: -1
         margin-left: 0
+  .slider
+    height: 350px
+  .hotel
+    &-right
+      flex-direction: column
+      min-height: 450px
+  .booking
+    width: 100%
+  .map
+    width: 100%
+
 
 @media (max-width: 576px)
   .logo
     width: 99px
+  .slider
+    height: 250px
+  .hotel
+    &-slider
+      margin-bottom: 20px
 
 
 
