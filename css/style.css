@@ -632,6 +632,11 @@ template {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 122, 223, 0.48)), to(rgba(255, 255, 255, 0.128)));
   background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
   z-index: 10;
+  border-radius: 8px;
+}
+
+.swiper-slide__image {
+  border-radius: 8px;
 }
 
 .slider {
