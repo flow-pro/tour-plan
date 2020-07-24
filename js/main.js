@@ -7,7 +7,7 @@ var hotelSlider = new Swiper(".hotel-slider", {
     nextEl: ".hotel-slider__button--next",
     prevEl: ".hotel-slider__button--prev",
   },
-  effect: "cube",
+  // effect: "cube",
 });
 
 var reviewsSlider = new Swiper(".reviews-slider", {
