@@ -848,6 +848,16 @@ template {
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
+  max-width: 242px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .newsletter-title__strong {
@@ -897,13 +907,17 @@ template {
 }
 
 .reviews__title {
+  max-width: 606px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: auto;
+  margin-bottom: 70px;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 45px;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 70px;
 }
 
 .reviews-slider__item {
@@ -1213,6 +1227,7 @@ template {
   }
   .reviews__title {
     font-size: 25px;
+    margin-bottom: 30px;
   }
   .reviews-slider__item {
     padding: 0 29px 36px 33px;
