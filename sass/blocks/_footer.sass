@@ -34,11 +34,20 @@
       grid-column: span 2
       // новое для футер боттом
       margin-bottom: 102px
+
+  &__button
+    &-list
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
   &__form
     display: flex
     flex-wrap: wrap
     align-items: center
     justify-content: space-between
+  &__input
+    flex-basis: 40%
   &__ul
     padding: 0
     margin: 0
@@ -92,9 +101,11 @@
     font-weight: normal
     font-size: 12px
     line-height: 15px
+    &::placeholder
+      color: #BDBDBD 
 
   &__message
-    width: 539px
+    max-width: 539px
     height: 123px
     background-color: #fff
     border-radius: 4px
@@ -107,6 +118,8 @@
     font-weight: normal
     font-size: 12px
     line-height: 15px
+    &::placeholder
+      color: #BDBDBD 
   &__button
     min-width: 160px
     min-height: 50px
@@ -146,6 +159,11 @@
       height: 22px
       align-self: end
       justify-self: end
+    // &__button
+    //   &-list
+    //     display: flex
+    //     align-items: center
+    //     justify-content: space-between
       
 
 
