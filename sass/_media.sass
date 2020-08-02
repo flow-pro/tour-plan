@@ -120,6 +120,22 @@
         align-self: start
       &-image
         grid-column: 4
+@media (max-width: 870px)
+  .modal
+    &__button
+      &-list
+        display: flex
+        flex-direction: column
+        align-items: start
+    &__info
+      order: -1
+      margin-bottom: 10px
+    &__input
+      width: 100% 
+    &__dialog
+      &--visible
+        width: 100%
+
 @media (max-width: 767px)
   .body
     padding-top: 78px
@@ -146,6 +162,9 @@
     &__user
       flex-direction: column
       justify-content: center
+      &--mobile
+        &--visible
+          margin-bottom: 7px
     &-bottom
       display: none
       position: fixed
@@ -156,15 +175,21 @@
       padding-top: 30px
       &--visible
         display: block
+        // height: 498px
+        padding-bottom: 69px
     &-menu
       flex-direction: column
+      padding: 0
       &__item
         padding-bottom: 20px
         &--mobile
           &--visible
-            display: block
-
-
+            display: block           
+    &__search
+      &--mobile
+        &--visible
+          max-width: 245px
+          margin-bottom: 19px
   .menu
     &-button
       display: flex
@@ -177,6 +202,7 @@
       border: none
       background-color: #fff
       cursor: pointer
+      outline: 0
       &__line
         width: 16px
         height: 1px
@@ -187,7 +213,6 @@
         color: $light
         margin-left: 0
         margin-top: 10px
-
   .stars
     flex-basis: auto
   .hotel
@@ -443,6 +468,7 @@
     &__text
       font-size: 14px
       line-height: 160%
+
 @media (max-width: 480px)
   .footer
     padding-top: 69px
@@ -452,7 +478,7 @@
       grid-gap: 0 0 
     &__logo
       grid-row: 1
-      grid-column: 1 / 3
+      grid-column: 1 / 3 
       width: 104px
       height: 120px
       margin-bottom: 39px
@@ -506,6 +532,19 @@
     &__text 
       font-size: 14px
       line-height: 160%
+  .modal
+    &__dialog
+      &--visible
+        padding-left: 78px
+        padding-right: 78px
+        // width: 100%
+
+@media (max-width: 450px)
+  .modal
+    &__dialog
+      &--visible
+        padding-left: 68px
+        padding-right: 68px
 @media (max-width: 376px)
   .activities
     &__title
@@ -515,6 +554,17 @@
     &__title
       font-size: 16px
       line-height: 20px
+  .modal
+    &__dialog
+      &--visible
+        padding-left: 58px
+        padding-right: 58px
+@media (max-width: 350px)
+  .modal
+    &__dialog
+      &--visible
+        padding-left: 48px
+        padding-right: 48px
 @media (max-width: 320px) 
   .hotel
     padding-top: 0
@@ -544,6 +594,7 @@
       margin-bottom: 36px
       padding-bottom: 0  
       margin-top: 0
+
 
 
 
