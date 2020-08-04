@@ -32,6 +32,7 @@
       rel="stylesheet"
     /> -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -44,6 +45,8 @@
               src="image/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
               class="logo__image"
+              data-aos="fade-right"
+              data-aos-duration="500"
             />
           </a>
 
@@ -112,25 +115,59 @@
                 </button>
               </form>
             </li>
-            <li class="navbar-menu__item">
+            <li
+              class="navbar-menu__item"
+              data-aos="zoom-in-up"
+              data-aos-delay="1300"
+            >
               <a href="#" class="navbar-menu__link">All Deals</a>
             </li>
             <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link">Hotels</a>
+              <a
+                href="#"
+                class="navbar-menu__link"
+                data-aos="zoom-in-up"
+                data-aos-delay="300"
+                >Hotels</a
+              >
             </li>
-            <li class="navbar-menu__item">
+            <li
+              class="navbar-menu__item"
+              data-aos="zoom-in-up"
+              data-aos-delay="1300"
+            >
               <a href="#" class="navbar-menu__link">Activities</a>
             </li>
             <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link">Hotel Day Packages</a>
+              <a
+                href="#"
+                class="navbar-menu__link"
+                data-aos="zoom-in-up"
+                data-aos-delay="600"
+                >Hotel Day Packages</a
+              >
             </li>
-            <li class="navbar-menu__item">
+            <li
+              class="navbar-menu__item"
+              data-aos="zoom-in-up"
+              data-aos-delay="1300"
+            >
               <a href="#" class="navbar-menu__link">Restaurants</a>
             </li>
             <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link">Events</a>
+              <a
+                href="#"
+                class="navbar-menu__link"
+                data-aos="zoom-in-up"
+                data-aos-delay="900"
+                >Events</a
+              >
             </li>
-            <li class="navbar-menu__item">
+            <li
+              class="navbar-menu__item"
+              data-aos="zoom-in-up"
+              data-aos-delay="1300"
+            >
               <a href="#" class="navbar-menu__link">Rodrigues</a>
             </li>
           </ul>
@@ -321,11 +358,20 @@
     <!-- /.hotel -->
     <div class="section newsletter">
       <div class="newsletter-wrapper">
-        <h2 class="newsletter-title newsletter__title">
+        <h2
+          class="newsletter-title newsletter__title"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <form action="#" class="subscribe newsletter__subscribe form">
+        <form
+          action="#"
+          class="subscribe newsletter__subscribe form"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <input
             type="email"
             class="subscribe__input"
@@ -434,7 +480,12 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="flip-left"
+            data-aos-duration="200"
+            data-aos-delay="200"
+          >
             <img
               src="image/activity-1.jpg"
               alt="The curious corner of chamarel"
@@ -444,7 +495,12 @@
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="flip-left"
+            data-aos-duration="400"
+            data-aos-delay="400"
+          >
             <img
               src="image/activity-2.jpg"
               alt="Gymkhana club golf course"
@@ -454,7 +510,12 @@
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="flip-left"
+            data-aos-duration="600"
+            data-aos-delay="600"
+          >
             <img
               src="image/activity-3.jpg"
               alt="Tamarind falls hiking trip - full day"
@@ -464,7 +525,12 @@
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="flip-left"
+            data-aos-duration="800"
+            data-aos-delay="800"
+          >
             <img
               src="image/activity-4.jpg"
               alt="The blue marine discovery quest"
@@ -487,6 +553,9 @@
             src="image/vertical-logo.svg"
             alt="Logo: Best Tour Plan"
             class="logo footer__logo"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+            data-aos-duration="500"
           />
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL&nbsp;CATEGORIES</h3>
@@ -624,7 +693,11 @@
             </ul>
           </div>
           <!-- /.footer__contact-details -->
-          <div class="footer__contact-form">
+          <div
+            class="footer__contact-form"
+            data-aos="zoom-in"
+            data-aos-delay="900"
+          >
             <h3 class="footer__title footer__title--mb34">Send us a message</h3>
             <form action="send.php" method="POST" class="footer__form form">
               <div class="footer__input-group">
@@ -740,6 +813,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
