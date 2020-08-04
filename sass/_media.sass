@@ -20,7 +20,30 @@
     height: 230px
   .footer
     &__input
-      flex-basis: 47%
+      &-group
+        flex-basis: 47%
+
+  .modal
+    &__input
+      &-group
+        width: 100%
+    &__button
+      &-list
+        display: flex
+        flex-direction: column
+        align-items: start
+    &__info
+      order: -1
+      margin-bottom: 10px
+      margin-top: 15px
+    &__button
+      margin-top: 0
+    &__input
+      &-group
+        width: 100%
+    &__dialog
+      &--visible
+        width: 100%
 @media (max-width: 992px)
   .footer
     padding-top: 73px
@@ -120,21 +143,28 @@
         align-self: start
       &-image
         grid-column: 4
-@media (max-width: 870px)
   .modal
-    &__button
-      &-list
-        display: flex
-        flex-direction: column
-        align-items: start
     &__info
-      order: -1
-      margin-bottom: 10px
-    &__input
-      width: 100% 
-    &__dialog
-      &--visible
-        width: 100%
+      margin-top: 15px
+@media (max-width: 870px)
+  // .modal
+  //   &__input
+  //     &-group
+  //       width: 100%
+  //   &__button
+  //     &-list
+  //       display: flex
+  //       flex-direction: column
+  //       align-items: start
+  //   &__info
+  //     order: -1
+  //     margin-bottom: 10px
+  //   &__input
+  //     &-group
+  //       width: 100%
+  //   &__dialog
+  //     &--visible
+  //       width: 100%
 
 @media (max-width: 767px)
   .body
@@ -448,7 +478,11 @@
         flex-direction: column
         align-items: start
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
+        margin-bottom: 15px
+    &__message
+      margin-top: 0
     &__button
       &-list
         width: 100%

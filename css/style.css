@@ -34,6 +34,7 @@ img {
   border: none;
   padding: 18px 23px;
   resize: none;
+  outline: 0;
 }
 
 .button {
@@ -50,6 +51,11 @@ img {
   border: none;
   cursor: pointer;
   outline: 0;
+}
+
+.invalid {
+  color: #EC1F46;
+  border-bottom: 1px solid #EC1F46;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -626,6 +632,7 @@ template {
 .hotel-slider {
   width: 728px;
   height: 450px;
+  margin-left: 0;
 }
 
 .hotel-slider__item {
@@ -1374,13 +1381,17 @@ template {
 }
 
 .footer__input {
-  margin-bottom: 15px;
+  width: 100%;
+}
+
+.footer__input-group {
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
+  margin-bottom: 0;
 }
 
 .footer__input::-webkit-input-placeholder {
@@ -1406,6 +1417,7 @@ template {
       flex-basis: 100%;
   resize: none;
   margin-bottom: 22px;
+  margin-top: 15px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -1516,6 +1528,7 @@ template {
 .modal__dialog--visible {
   visibility: visible;
   opacity: 1;
+  width: 100%;
 }
 
 .modal__close {
@@ -1554,13 +1567,18 @@ template {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
+  outline: 0;
 }
 
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.modal__button {
+  margin-top: 15px;
 }
 
 .modal__info {
@@ -1582,6 +1600,16 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.modal__input-group {
+  margin: 0;
+  padding: 0;
+}
+
+.invalid {
+  font-size: 13px;
+  margin-top: 0;
 }
 
 @media (max-width: 1200px) {
@@ -1608,9 +1636,40 @@ template {
     width: 230px;
     height: 230px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 47%;
         flex-basis: 47%;
+  }
+  .modal__input-group {
+    width: 100%;
+  }
+  .modal__button-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .modal__info {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+  .modal__button {
+    margin-top: 0;
+  }
+  .modal__input-group {
+    width: 100%;
+  }
+  .modal__dialog--visible {
+    width: 100%;
   }
 }
 
@@ -1766,32 +1825,8 @@ template {
     -ms-grid-column: 4;
     grid-column: 4;
   }
-}
-
-@media (max-width: 870px) {
-  .modal__button-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-  }
   .modal__info {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-    margin-bottom: 10px;
-  }
-  .modal__input {
-    width: 100%;
-  }
-  .modal__dialog--visible {
-    width: 100%;
+    margin-top: 15px;
   }
 }
 
@@ -2257,9 +2292,13 @@ template {
         -ms-flex-align: start;
             align-items: start;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+  .footer__message {
+    margin-top: 0;
   }
   .footer__button-list {
     width: 100%;
