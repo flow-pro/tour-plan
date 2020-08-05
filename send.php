@@ -5,21 +5,41 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
-
-
+$nameFooter = $_POST['name-footer'];
+$phoneFooter = $_POST['phone-footer'];
+$messageFooter = $_POST['message-footer'];
+$emailNewsletter = $_POST['email-newsletter'];
+$nameBooking = $_POST['name-booking'];
+$phoneBooking = $_POST['phone-booking'];
+$messageBooking = $_POST['message-booking'];
+$emailBooking = $_POST['email-booking'];
 
 // Формирование самого письма
-$title = "Новое обращение Best Tour Plan";
-$body = "
+if ($nameFooter) {
+  $title = "Новое обращение Best Tour Plan";
+  $body = "
 <h2>Новое обращение</h2>
-<b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-
+<b>Имя:</b> $nameFooter<br>
+<b>Телефон:</b> $phoneFooter<br><br>
+<b>Сообщение:</b><br>$messageFooter
 ";
+} elseif ($emailNewsletter) {
+  $title = "Новое обращение Best Tour Plan";
+  $body = "
+<h2>Новый подписчик</h2>
+<b>Адрес почты подписчика:</b>$emailNewsletter<br>
+";
+} elseif ($nameBooking) {
+  $title = "Новое обращение Best Tour Plan";
+  $body = "
+<h2>Новое обращение</h2>
+<b>Имя:</b> $nameBooking<br>
+<b>Телефон:</b> $phoneBooking<br>
+<b>Почта:</b> $emailBooking<br><br>
+<b>Сообщение:</b><br>$messageBooking
+";
+}
+
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -59,6 +79,12 @@ try {
   $result = "error";
   $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
-
 // Отображение результата
-header('Location: thankyou.html');
+if ($nameFooter) {
+  header('Location: thanksmessage.html');
+} elseif ($emailNewsletter) {
+  header('Location: thanksemail.html');
+} elseif ($nameBooking) {
+  header('Location: thanksbooking.html');
+}
+// echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);

@@ -45,18 +45,23 @@
     font-weight: bold
     font-size: 18px
     line-height: 23px
+    margin-top: 0
     margin-bottom: 15px
     text-transform: uppercase
     text-align: center
   &__input
-
     width: 100%
-    margin-top: 15px
-    outline: 0
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    &:focus
+      outline: none
   &__message
     width: 100%
     min-height: 123px
-    margin-top: 15px
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
   &__button
     margin-top: 15px
   &__info
@@ -72,19 +77,11 @@
       justify-content: space-between
       align-items: center
 .modal
-  &__input
-    &-group
-      margin: 0
-      padding: 0
-// .modal
-//   &__form
-//     &-group
-//       position: relative
-.invalid
-  // position: absolute
-  // margin-top: -50px
-  font-size: 13px
-  margin-top: 0
+  &__input      
+    &-group     
+      margin-bottom: 15px
+
+
   
 
 

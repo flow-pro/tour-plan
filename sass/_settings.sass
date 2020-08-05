@@ -15,6 +15,13 @@ img
   border: none
   padding: 0 23px
   height: 50px
+
+  &.invalid
+    display: flex
+    flex-direction: column
+    position: relative
+    font-size: 14px
+    margin-top: 0
 .message
   max-width: 539px
   max-height: 123px
@@ -40,8 +47,13 @@ img
   outline: 0
 .invalid
   color: $primary
-  border-bottom: 1px solid $primary
-  // z-index: 99
+  position: absolute
+  font-size: 12px
+button, input, textarea
+  &:focus
+    outline: none
+
+
 
 
 
