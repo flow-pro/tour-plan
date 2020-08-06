@@ -2,21 +2,25 @@
   padding-top: 23px
   padding-bottom: 70px
   &-info
+    position: relative
     display: flex
     align-items: center
     justify-content: space-between
-    padding-bottom: 20px
+    padding-bottom: 10px
     &__offer
-      margin-left: 14px
-      margin-top: 4px
+      margin-left: 12px
+      margin-top: 10px
     &__name
       margin-top: 4px
       margin-bottom: 0
     &__description
-      margin: 5px 0
+      margin-top: 0
   &-name
     font-size: 24px
     line-height: 30px
+    font-weight: bold
+    padding-top: 6px
+ 
   &-wrapper
     display: flex
     flex-wrap: wrap
@@ -79,7 +83,6 @@
       cursor: pointer
       background-repeat: no-repeat
       background-position: center
-      // background-size: 10px
       background-color: transparent
       outline: 0
       &--next
@@ -89,7 +92,11 @@
         left: 18px
         background-image: url(../image/arrow-prev.svg)
 .stars
+  position: absolute
   flex-basis: 100%
+  top: -10%
+  // width: 48px
+  // height: 8px
 .offer
   font-size: 10px
   line-height: 13px
@@ -104,6 +111,7 @@
   background-color: $primary
   color: $light
   border-radius: 4px
+  margin-bottom: 10px
   &__text
     font-size: 8px
     line-height: 10px
@@ -114,7 +122,7 @@
   width: 350px
   min-height: 210px
   border-radius: 8px
-  padding: 28px
+  padding: 27px
   background-color: $dark
   color: $light
   font-family: Nunito
@@ -122,7 +130,7 @@
   &__info
     display: flex
     justify-content: space-between
-    margin-bottom: 9px
+    margin-bottom: 5px
   &__price
     display: flex
     flex-direction: column
@@ -186,6 +194,7 @@
     border: none
     color: $light
     cursor: pointer
+    padding: 13px 0
 .map
   width: 347px
   height: 213px

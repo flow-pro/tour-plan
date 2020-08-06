@@ -45,12 +45,19 @@
       &--visible
         width: 100%
 @media (max-width: 992px)
+  
+  .navbar
+    &__search
+      max-width: 320px
+      padding-left: 0
+
   .footer
     padding-top: 73px
     padding-bottom: 33px
   .container, 
   .newsletter-wrapper
     max-width: 700px
+   
   .logo
     width: 132px
   .navbar
@@ -66,6 +73,7 @@
         font-size: 12px
         line-height: 15px
   .hotel
+    padding-bottom: 58px
     &-grid
       flex-direction: column
     &__slider
@@ -89,6 +97,10 @@
         &:after,
         &:before
           display: none
+  .subscribe
+    &__button
+      font-size: 12px
+      line-height: 15px
     &__title
       font-size: 30px
   .activities 
@@ -106,6 +118,23 @@
     &__title
       font-size: 24px
       line-height: 30px
+  .newsletter
+    &-wrapper
+      display: flex
+      align-items: start
+    &-title
+      align-items: flex-start
+      &__subscribe
+        text-align: start
+  .reviews
+    &-slider
+      &__profile
+        margin-top: -30px
+      &__item
+        margin-top: 30px
+    &__title
+      margin-bottom: 50px
+
   .footer
     &-wrapper
       grid-gap: 20px 20px
@@ -134,37 +163,33 @@
         max-width: 539px
         grid-row: 4
         grid-column: span 4
-        padding-right: 50px
-        margin-bottom: 36px
+        margin-bottom: 50px
     &__bottom
       grid-column: 1 / 3
       justify-self: start
+      align-self: start
       &-link
         align-self: start
       &-image
         grid-column: 4
+        align-self: start
+        margin-left: auto
+        margin-top: -10px
+    &__title
+      &--mb3
+        margin-bottom: 20px
+        padding-top: 0    
+      &--mb34
+        margin-top: 20px
+
   .modal
     &__info
       margin-top: 15px
 @media (max-width: 870px)
-  // .modal
-  //   &__input
-  //     &-group
-  //       width: 100%
-  //   &__button
-  //     &-list
-  //       display: flex
-  //       flex-direction: column
-  //       align-items: start
-  //   &__info
-  //     order: -1
-  //     margin-bottom: 10px
-  //   &__input
-  //     &-group
-  //       width: 100%
-  //   &__dialog
-  //     &--visible
-  //       width: 100%
+  .footer
+    &_legal
+      margin-left: 0
+
 
 @media (max-width: 767px)
   .body
@@ -205,7 +230,6 @@
       padding-top: 30px
       &--visible
         display: block
-        // height: 498px
         padding-bottom: 69px
     &-menu
       flex-direction: column
@@ -278,6 +302,8 @@
       width: 92%
       flex-direction: column
       align-items: flex-start
+    &-title
+      margin-bottom: 18px
   .reviews
     &__title
       font-size: 25px
@@ -374,7 +400,7 @@
   .newsletter
     padding: 76px 0 83px 0
     &__title
-      margin-bottom: 37px
+      margin-bottom: 27px
       font-size: 20px
       line-height: 25px
     &-title
@@ -382,7 +408,7 @@
         font-size: 30px
         line-height: 38px
   .subscribe
-    width: 100%
+    // width: 100%
   .card
     display: flex
     flex-direction: column
@@ -427,7 +453,8 @@
     &_legal
       grid-row: 2
       grid-column: 3 / 5
-      margin-bottom: 30px
+      margin: 0 0 30px 0
+    
     &__title
       &--inline
         margin-bottom: 20px 
@@ -493,8 +520,9 @@
     &__bottom
       &-image
         grid-row: 7
-        grid-column: span 4
+        grid-column: 1 / 3
         justify-self: start
+        margin: 0
     &__title
       font-size: 18px
       line-height: 23px
@@ -553,6 +581,8 @@
         margin-bottom: 30px
     &__button
       margin-bottom: 6px
+      &-list
+        margin-bottom: 30px
     &__bottom
       grid-row: 8
       &-image
@@ -571,7 +601,6 @@
       &--visible
         padding-left: 78px
         padding-right: 78px
-        // width: 100%
 
 @media (max-width: 450px)
   .modal
@@ -579,6 +608,9 @@
       &--visible
         padding-left: 68px
         padding-right: 68px
+  .newsletter
+    &__subscribe
+      width: 100%
 @media (max-width: 376px)
   .activities
     &__title
@@ -599,13 +631,49 @@
       &--visible
         padding-left: 48px
         padding-right: 48px
-@media (max-width: 320px) 
+@media (max-width: 320px)  
+  .stars
+    position: absolute
+    left: 70%
+    top: 5%
   .hotel
     padding-top: 0
-    padding-bottom: 40px
+    padding-bottom: 0
+    &__right
+      
     &-slider
       height: 179px
+    &-info
+      margin-bottom: 20px
+      &__offer
+        margin-top: 6px
+      &__name
+        margin-top: 0
+
   .reviews
+    &-slider
+      margin-top: -15px
+      &__profile
+        margin-left: -20px
+        margin-top: -32px
+
+      &__text
+        width: 219px
+        margin: 0
+      &__item
+        margin-top: 47px 
+    &__title
+      font-weight: bold
+      font-size: 18px
+      line-height: 23px
+      text-align: center
+      text-transform: uppercase
+    &-slider
+      &__button
+        &--prev
+          margin-left: -96px
+        &--next
+          margin-right: -83px
     &__title
       font-size: 18px
       line-height: 23px
@@ -614,6 +682,15 @@
     &-slider
       &__item
         margin-top: 10
+  .map
+    width: 280px
+    height: 172.94px
+    position: absolute
+    margin-top: 70%
+  // .newsletter
+  //   margin-top: 0
+  .booking
+    margin-bottom: 15px
   .card
     &__image
       width: 100%
@@ -621,13 +698,49 @@
     &__title
       font-size: 16px
       line-height: 20px
+      margin-bottom: 18px
   .activities
+    padding-top: 30px
+    padding-bottom: 48px
     &__title
       font-size: 18px
       line-height: 23px
       margin-bottom: 36px
       padding-bottom: 0  
       margin-top: 0
+  .newsletter
+    &__title
+      margin-bottom: 33px
+  .footer
+    padding-bottom: 0
+    &__logo
+      width: 104px
+      height: 120px
+      margin-top: 0
+      margin-bottom: 30px
+    &__title
+      margin-bottom: 18px  
+      &--mb34
+        margin-top: 0
+        margin-bottom: 16px
+    &__button
+      &-list
+        margin-bottom: 20px
+    &__bottom
+      &-image
+        grid-row: 9
+        align-self: start
+        justify-self: start
+        justify-content: start
+        margin-top: -12px
+    &__message
+      margin-bottom: 10px 
+    &__contact
+      &-details
+        margin-bottom: 53px
+
+    
+
 
 
 

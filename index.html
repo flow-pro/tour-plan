@@ -190,7 +190,7 @@
         <div class="hotel-info">
           <div class="hotel-info__text">
             <div class="hotel-wrapper">
-              <div class="stars">
+              <div class="stars offer__stars">
                 <img src="image/star.svg" alt="star" />
                 <img src="image/star.svg" alt="star" />
                 <img src="image/star.svg" alt="star" />
@@ -198,12 +198,14 @@
                 <img src="image/star.svg" alt="star" />
               </div>
               <h1 class="hotel-name hotel-info__name">GRAND HILTON HOTEL</h1>
-              <span class="offer hotel-info__offer">Flash Offer</span>
+              <span class="offer hotel-info__offer offer__stars"
+                >Flash Offer</span
+              >
             </div>
             <!-- /.hotel-wrapper -->
             <p class="hotel-description hotel-info__description">
-              Half-Board/ All Inclusive + Complimentary Activities + Child Stays
-              Free
+              Half-Board/ All Inclusive + Complimentary Activities&nbsp;+ Child
+              Stays Free
             </p>
           </div>
           <!-- /.hotel-info__text -->
@@ -349,20 +351,14 @@
     <!-- /.hotel -->
     <div class="section newsletter">
       <div class="newsletter-wrapper">
-        <h2
-          class="newsletter-title newsletter__title"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
-          subscribe to our
+        <h2 class="newsletter-title newsletter__title">
+          <span class="newsletter-title__subscribe">subscribe to our</span>
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
         <form
           action="send.php"
           method="POST"
           class="subscribe newsletter__subscribe form"
-          data-aos="fade-left"
-          data-aos-duration="1000"
         >
           <input
             type="email"
@@ -541,9 +537,6 @@
             src="image/vertical-logo.svg"
             alt="Logo: Best Tour Plan"
             class="logo footer__logo"
-            data-aos="zoom-in"
-            data-aos-delay="300"
-            data-aos-duration="400"
           />
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL&nbsp;CATEGORIES</h3>
@@ -681,12 +674,7 @@
             </ul>
           </div>
           <!-- /.footer__contact-details -->
-          <div
-            class="footer__contact-form"
-            data-aos="zoom-in"
-            data-aos-delay="500"
-            data-aos-duration="500"
-          >
+          <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb34">Send us a message</h3>
             <form action="send.php" method="POST" class="footer__form form">
               <div class="footer__input-group">
@@ -725,7 +713,7 @@
             <!-- /.footer__form -->
           </div>
           <!-- /.footer__contact-form -->
-          <div class="footer__bottom">
+          <div class="footer__bottom footer__bottom-block">
             <a href="#" class="footer__bottom-link">Disclaimer</a>
             <a href="#" class="footer__bottom-link">Conditions of use</a>
             <a href="#" class="footer__bottom-link">Cancellation policy</a>
@@ -734,7 +722,7 @@
           <img
             src="image/footer-bottom.jpg"
             alt="footer-bottom"
-            class="footer__bottom-image"
+            class="footer__bottom-image footer__bottom-block"
           />
         </div>
         <!-- /.footer-wrapper -->
