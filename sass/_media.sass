@@ -125,7 +125,10 @@
     &-title
       align-items: flex-start
       &__subscribe
-        text-align: start
+        display: flex
+        flex-direction: column
+        justify-content: start
+       
   .reviews
     &-slider
       &__profile
@@ -424,12 +427,15 @@
       margin-bottom: 27px
       font-size: 20px
       line-height: 25px
+      bottom: -50px
     &-title
       &__strong
         font-size: 30px
         line-height: 38px
-  .subscribe
-    // width: 100%
+
+        
+
+
   .card
     display: flex
     flex-direction: column
@@ -762,7 +768,18 @@
     &__contact
       &-details
         margin-bottom: 53px
-
+        h1
+@media (max-height: 487px)
+  .modal
+    &__dialog
+      &--visible
+        height: 100%
+        overflow-y: auto
+  .navbar
+    &-bottom
+      &--visible
+        height: 100%
+        overflow-y: auto
     
 
 
