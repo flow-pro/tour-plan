@@ -116,8 +116,9 @@
     width: 339px
     height: 255px
     &__title
-      font-size: 24px
-      line-height: 30px
+      font-weight: bold
+      font-size: 16px
+      line-height: 20px
   .newsletter
     &-wrapper
       display: flex
@@ -295,6 +296,7 @@
       min-height: 450px
     &-slider
       height: 350px
+      border-radius: 8px
   .booking
     width: 100%
   .map
@@ -332,8 +334,6 @@
   .card
     width: 280px
     min-height: 255px
-    &__title
-      font-size: 20px
   .activities
     padding-top: 40px
     padding-bottom: 60px
@@ -432,10 +432,6 @@
       &__strong
         font-size: 30px
         line-height: 38px
-
-        
-
-
   .card
     display: flex
     flex-direction: column
@@ -445,7 +441,7 @@
     margin-bottom: 20px
     min-height: 255px
     object-fit: cover
-    z-index: 100
+    z-index: 10
     &__title
       font-size: 16px
       line-height: 20px
@@ -782,7 +778,17 @@
         overflow-y: auto
     
 
+@media print 
+  .gm-style .gmnoprint, 
+  .gmnoprint 
+    display: none
+	
 
+@media screen 
+  .gm-style .gmnoscreen, 
+  .gmnoscreen 
+    display: none
+	
 
 
 

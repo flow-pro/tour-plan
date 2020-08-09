@@ -19,7 +19,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -27,13 +26,11 @@
     <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="index.html" class="logo">
             <img
               src="image/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
               class="logo__image"
-              data-aos="fade-right"
-              data-aos-duration="500"
             />
           </a>
 
@@ -102,59 +99,25 @@
                 </button>
               </form>
             </li>
-            <li
-              class="navbar-menu__item"
-              data-aos="zoom-in-up"
-              data-aos-delay="1300"
-            >
+            <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">All Deals</a>
             </li>
             <li class="navbar-menu__item">
-              <a
-                href="#"
-                class="navbar-menu__link"
-                data-aos="zoom-in-up"
-                data-aos-delay="300"
-                >Hotels</a
-              >
+              <a href="#" class="navbar-menu__link">Hotels</a>
             </li>
-            <li
-              class="navbar-menu__item"
-              data-aos="zoom-in-up"
-              data-aos-delay="1300"
-            >
+            <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">Activities</a>
             </li>
             <li class="navbar-menu__item">
-              <a
-                href="#"
-                class="navbar-menu__link"
-                data-aos="zoom-in-up"
-                data-aos-delay="600"
-                >Hotel Day Packages</a
-              >
+              <a href="#" class="navbar-menu__link">Hotel Day Packages</a>
             </li>
-            <li
-              class="navbar-menu__item"
-              data-aos="zoom-in-up"
-              data-aos-delay="1300"
-            >
+            <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">Restaurants</a>
             </li>
             <li class="navbar-menu__item">
-              <a
-                href="#"
-                class="navbar-menu__link"
-                data-aos="zoom-in-up"
-                data-aos-delay="900"
-                >Events</a
-              >
+              <a href="#" class="navbar-menu__link">Events</a>
             </li>
-            <li
-              class="navbar-menu__item"
-              data-aos="zoom-in-up"
-              data-aos-delay="1300"
-            >
+            <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">Rodrigues</a>
             </li>
           </ul>
@@ -329,6 +292,30 @@
               ></iframe>
             </div>
             <!-- /.map -->
+            <script>
+              var map, head, insertBefore, appendChild;
+              head = document.getElementsByTagName("head")[0];
+              insertBefore = head.insertBefore;
+              appendChild = head.appendChild;
+              head.insertBefore = function (newElement, referenceElement) {
+                if (newElement.type === "text/css") {
+                  return;
+                }
+                insertBefore.call(head, newElement, referenceElement);
+              };
+              head.appendChild = function (newElement, referenceElement) {
+                if (newElement.type === "text/css") {
+                  return;
+                }
+                appendChild.call(head, newElement, referenceElement);
+              };
+              function initMap() {
+                map = new google.maps.Map(document.qwerySelector(".map"), {
+                  center: { lat: -34.397, lng: 150.644 },
+                  zoom: 8,
+                });
+              }
+            </script>
           </div>
           <!-- /.hotel-right -->
         </div>
@@ -458,60 +445,68 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div
-            class="card activities__card"
-            data-aos="flip-left"
-            data-aos-delay="100"
-          >
+          <div class="card activities__card">
             <img
               src="image/activity-1.jpg"
               alt="The curious corner of chamarel"
               class="card__image"
             />
             <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <button
+              class="card__button"
+              data-toggle="modal"
+              data-href="#booking-modal"
+            >
+              Book Now
+            </button>
           </div>
           <!-- /.card -->
-          <div
-            class="card activities__card"
-            data-aos="flip-left"
-            data-aos-delay="300"
-          >
+          <div class="card activities__card">
             <img
               src="image/activity-2.jpg"
               alt="Gymkhana club golf course"
               class="card__image"
             />
             <h3 class="card__title">Gymkhana&nbsp;club&nbsp;golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button
+              class="card__button"
+              data-toggle="modal"
+              data-href="#booking-modal"
+            >
+              Book Now
+            </button>
           </div>
           <!-- /.card -->
-          <div
-            class="card activities__card"
-            data-aos="flip-left"
-            data-aos-delay="500"
-          >
+          <div class="card activities__card">
             <img
               src="image/activity-3.jpg"
               alt="Tamarind falls hiking trip - full day"
               class="card__image"
             />
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-            <button class="card__button">Book Now</button>
+            <button
+              class="card__button"
+              data-toggle="modal"
+              data-href="#booking-modal"
+            >
+              Book Now
+            </button>
           </div>
           <!-- /.card -->
-          <div
-            class="card activities__card"
-            data-aos="flip-left"
-            data-aos-delay="700"
-          >
+          <div class="card activities__card">
             <img
               src="image/activity-4.jpg"
               alt="The blue marine discovery quest"
               class="card__image"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button
+              class="card__button"
+              data-toggle="modal"
+              data-href="#booking-modal"
+            >
+              Book Now
+            </button>
           </div>
           <!-- /.card -->
         </div>
@@ -523,11 +518,14 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img
-            src="image/vertical-logo.svg"
-            alt="Logo: Best Tour Plan"
-            class="logo footer__logo"
-          />
+          <a href="index.html" class="logo footer__logo">
+            <img
+              src="image/vertical-logo.svg"
+              alt="Logo: Best Tour Plan"
+              class="logo footer__logo"
+            />
+          </a>
+
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL&nbsp;CATEGORIES</h3>
             <ul class="footer__ul">
@@ -632,7 +630,6 @@
                   <img
                     class="footer__icon"
                     src="image/map-marker.svg"
-                    src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
                     alt="icon: map"
                   />
                 </div>
@@ -644,19 +641,19 @@
                   <img
                     class="footer__icon"
                     src="image/contact-phone-call.svg"
-                    src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
                     alt="icon: contact phone"
                   />
                 </div>
                 <span
                   >Tel (business hours) :
-                  <a class="link footer__link" href="269-1500">269 1500</a>
+                  <a class="link footer__link" href="tel:2691500">269 1500</a>
                   <br />Tel (hotline) Monday - Saturday:
-                  <a class="link footer__link" href="52-56-61-38"
+                  <a class="link footer__link" href="tel:52566138"
                     >52-56-61-38</a
                   >
                   (08:00 am – 20:00 pm) <br />Tel (hotline) Sunday:
-                  <a class="link footer__link" href="52-56-61-38">52-56-61-38</a
+                  <a class="link footer__link" href="tel:52566138"
+                    >52-56-61-38</a
                   >(08:00 am – 14:00 pm) <br
                 /></span>
               </li>
@@ -668,19 +665,16 @@
                     alt="icon: email"
                   />
                 </div>
-                <a class="link footer__link" href="52-56-61-38"
+                <a
+                  class="link footer__link"
+                  href="mailto:cherly.lawson@example.com"
                   >cherly.lawson@example.com</a
                 >
               </li>
             </ul>
           </div>
           <!-- /.footer__contact-details -->
-          <div
-            class="footer__contact-form"
-            data-aos="zoom-in"
-            data-aos-delay="500"
-            data-aos-duration="500"
-          >
+          <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb34">Send us a message</h3>
             <form action="send.php" method="POST" class="footer__form form">
               <div class="footer__input-group">
@@ -700,6 +694,7 @@
                   placeholder="Phone Number*"
                   name="phone-footer"
                   required
+                  minlength="16"
                 />
               </div>
 
@@ -763,6 +758,7 @@
               placeholder="Phone Number*"
               name="phone-booking"
               required
+              minlength="16"
             />
           </div>
 
@@ -796,9 +792,8 @@
 
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
-    <script src="js/aos.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

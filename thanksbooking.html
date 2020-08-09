@@ -6,11 +6,6 @@
     <title>Best Tour Plan - Hotel Booking</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- Nunito regular 400, bold 700 и  semiBold 600 -->
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
@@ -159,6 +154,11 @@
             <p class="hotel-description hotel-info__description">
               Our manager will call you back within 15 minutes
             </p>
+            <a href="index.html">
+              <button class="button">
+                Back
+              </button>
+            </a>
           </div>
           <!-- /.hotel-info__text -->
         </div>
@@ -166,14 +166,18 @@
       </div>
       <!-- /.container -->
     </section>
+
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img
-            src="image/vertical-logo.svg"
-            alt="Logo: Best Tour Plan"
-            class="logo footer__logo"
-          />
+          <a href="index.html" class="logo footer__logo">
+            <img
+              src="image/vertical-logo.svg"
+              alt="Logo: Best Tour Plan"
+              class="logo footer__logo"
+            />
+          </a>
+
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL&nbsp;CATEGORIES</h3>
             <ul class="footer__ul">
@@ -294,13 +298,14 @@
                 </div>
                 <span
                   >Tel (business hours) :
-                  <a class="link footer__link" href="269 1500">269 1500</a>
+                  <a class="link footer__link" href="tel:2691500">269 1500</a>
                   <br />Tel (hotline) Monday - Saturday:
-                  <a class="link footer__link" href="52-56-61-38"
+                  <a class="link footer__link" href="tel:52566138"
                     >52-56-61-38</a
                   >
                   (08:00 am – 20:00 pm) <br />Tel (hotline) Sunday:
-                  <a class="link footer__link" href="52-56-61-38">52-56-61-38</a
+                  <a class="link footer__link" href="tel:52566138"
+                    >52-56-61-38</a
                   >(08:00 am – 14:00 pm) <br
                 /></span>
               </li>
@@ -312,7 +317,9 @@
                     alt="icon: email"
                   />
                 </div>
-                <a class="link footer__link" href="52-56-61-38"
+                <a
+                  class="link footer__link"
+                  href="mailto:cherly.lawson@example.com"
                   >cherly.lawson@example.com</a
                 >
               </li>
@@ -322,22 +329,31 @@
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb34">Send us a message</h3>
             <form action="send.php" method="POST" class="footer__form form">
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Your Full Name*"
-                name="name"
-              />
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Phone Number*"
-                name="phone"
-              />
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="input footer__input"
+                  placeholder="Your Full Name*"
+                  name="name-footer"
+                  required
+                  minlength="2"
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="phone input footer__input"
+                  placeholder="Phone Number*"
+                  name="phone-footer"
+                  required
+                  minlength="16"
+                />
+              </div>
+
               <textarea
                 class="message footer__message"
                 placeholder="Message"
-                name="message"
+                name="message-footer"
               ></textarea>
 
               <div class="footer__button-list">
@@ -350,7 +366,7 @@
             <!-- /.footer__form -->
           </div>
           <!-- /.footer__contact-form -->
-          <div class="footer__bottom">
+          <div class="footer__bottom footer__bottom-block">
             <a href="#" class="footer__bottom-link">Disclaimer</a>
             <a href="#" class="footer__bottom-link">Conditions of use</a>
             <a href="#" class="footer__bottom-link">Cancellation policy</a>
@@ -359,7 +375,7 @@
           <img
             src="image/footer-bottom.jpg"
             alt="footer-bottom"
-            class="footer__bottom-image"
+            class="footer__bottom-image footer__bottom-block"
           />
         </div>
         <!-- /.footer-wrapper -->
@@ -367,7 +383,6 @@
       <!-- /.container -->
     </footer>
     <!-- /.footer -->
-    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

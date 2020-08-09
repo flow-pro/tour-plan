@@ -50,6 +50,20 @@ $(document).ready(function () {
   $(".form").each(function () {
     $(this).validate({
       errorClass: "invalid",
+      rules: {
+        name: {
+          required: true,
+          minlength: 2,
+        },
+        email: {
+          required: true,
+          email: true,
+        },
+        phone: {
+          required: true,
+          minlength: 16,
+        },
+      },
       messages: {
         name: {
           required: "Please specify your name",
@@ -61,12 +75,30 @@ $(document).ready(function () {
         },
         phone: {
           required: "Please enter your phone number",
+          minlength: "Please, at least 15 characters are necessary",
         },
       },
     });
   });
 
-  $(".phone").mask("+7(000)000-00-00");
+  $(".phone").mask("+7(ZZZ)ZZZ-ZZ-ZZ", {
+    autoclear: false,
+    watchDataMask: true,
+    minlength: true,
+    translation: {
+      Z: {
+        pattern: /[0-9]/,
+        optional: true,
+      },
+    },
+  });
 
-  AOS.init();
+  jQuery(function initMap() {
+    if (document.qwerySelector(".map") !== null) {
+      map = new google.maps.Map(document.qwerySelector(".map"), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8,
+      });
+    }
+  });
 });
